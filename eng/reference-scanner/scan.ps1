@@ -18,7 +18,7 @@
 
 .EXAMPLE
     pwsh eng/reference-scanner/scan.ps1 -All
-    pwsh eng/reference-scanner/scan.ps1 -Paths plugins/dotnet/skills/foo/SKILL.md
+    pwsh eng/reference-scanner/scan.ps1 -Paths plugins/release/skills/foo/SKILL.md
 #>
 
 [CmdletBinding()]

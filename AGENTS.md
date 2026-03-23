@@ -1,6 +1,6 @@
 # Repository Instructions
 
-This repository contains skill plugins under `plugins/`. Each subdirectory in `plugins/` is an independent plugin (e.g., `plugins/dotnet-msbuild`, `plugins/dotnet`).
+This repository contains skill plugins under `plugins/`. There are two plugins: `plugins/release` (stable skills) and `plugins/experimental` (preview skills under active evaluation).
 
 ## Build
 

@@ -5,87 +5,129 @@
 /eng/ @ViktorHofer @JanKrivanek
 /.github/workflows/ @ViktorHofer @JanKrivanek
 
-# msbuild
-/plugins/dotnet-msbuild/ @ViktorHofer @JanKrivanek
-/tests/dotnet-msbuild/ @ViktorHofer @JanKrivanek
+# msbuild skills
+/plugins/release/skills/binlog-failure-analysis/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/binlog-generation/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/build-parallelism/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/build-perf-baseline/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/build-perf-diagnostics/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/check-bin-obj-clash/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/directory-build-organization/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/eval-performance/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/including-generated-files/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/incremental-build/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/msbuild-antipatterns/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/msbuild-modernization/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/msbuild-server/ @ViktorHofer @JanKrivanek
+/plugins/release/skills/resolve-project-references/ @ViktorHofer @JanKrivanek
+/tests/release/binlog-failure-analysis/ @ViktorHofer @JanKrivanek
+/tests/release/binlog-generation/ @ViktorHofer @JanKrivanek
+/tests/release/build-parallelism/ @ViktorHofer @JanKrivanek
+/tests/release/build-perf-baseline/ @ViktorHofer @JanKrivanek
+/tests/release/build-perf-diagnostics/ @ViktorHofer @JanKrivanek
+/tests/release/check-bin-obj-clash/ @ViktorHofer @JanKrivanek
+/tests/release/directory-build-organization/ @ViktorHofer @JanKrivanek
+/tests/release/eval-performance/ @ViktorHofer @JanKrivanek
+/tests/release/including-generated-files/ @ViktorHofer @JanKrivanek
+/tests/release/incremental-build/ @ViktorHofer @JanKrivanek
+/tests/release/msbuild-antipatterns/ @ViktorHofer @JanKrivanek
+/tests/release/msbuild-modernization/ @ViktorHofer @JanKrivanek
+/tests/release/msbuild-server/ @ViktorHofer @JanKrivanek
+/tests/release/resolve-project-references/ @ViktorHofer @JanKrivanek
+/plugins/release/agents/build-perf.agent.md @ViktorHofer @JanKrivanek
+/plugins/release/agents/msbuild-code-review.agent.md @ViktorHofer @JanKrivanek
+/plugins/release/agents/msbuild.agent.md @ViktorHofer @JanKrivanek
 /agentic-workflows/dotnet-msbuild/ @ViktorHofer @JanKrivanek
 
 # dotnet (common everyday C#/.NET)
-/plugins/dotnet/lsp.json @dotnet/roslyn-ide
+/plugins/release/lsp.json @dotnet/roslyn-ide
 
-/plugins/dotnet/skills/csharp-scripts/ @dotnet/roslyn
-/tests/dotnet/csharp-scripts/ @dotnet/roslyn
+/plugins/release/skills/csharp-scripts/ @dotnet/roslyn
+/tests/release/csharp-scripts/ @dotnet/roslyn
 
-/plugins/dotnet/skills/dotnet-pinvoke/ @dotnet/appmodel
-/tests/dotnet/dotnet-pinvoke/ @dotnet/appmodel
+/plugins/release/skills/dotnet-pinvoke/ @dotnet/appmodel
+/tests/release/dotnet-pinvoke/ @dotnet/appmodel
 
-/plugins/dotnet/skills/nuget-trusted-publishing/ @lewing @kartheekp-ms
-/tests/dotnet/nuget-trusted-publishing/ @lewing @kartheekp-ms
+/plugins/release/skills/nuget-trusted-publishing/ @lewing @kartheekp-ms
+/tests/release/nuget-trusted-publishing/ @lewing @kartheekp-ms
 
 # dotnet-upgrade (migrating and upgrading .NET projects)
-/plugins/dotnet-upgrade/skills/thread-abort-migration/ @dotnet/appmodel
-/tests/dotnet-upgrade/thread-abort-migration/ @dotnet/appmodel
+/plugins/release/skills/thread-abort-migration/ @dotnet/appmodel
+/tests/release/thread-abort-migration/ @dotnet/appmodel
 
-/plugins/dotnet-upgrade/skills/migrate-nullable-references/ @danmoseley @agocke
-/tests/dotnet-upgrade/migrate-nullable-references/ @danmoseley @agocke
+/plugins/release/skills/migrate-nullable-references/ @danmoseley @agocke
+/tests/release/migrate-nullable-references/ @danmoseley @agocke
 
-/plugins/dotnet-upgrade/skills/dotnet-aot-compat/ @agocke @dotnet/appmodel
-/tests/dotnet-upgrade/dotnet-aot-compat/ @agocke @dotnet/appmodel
+/plugins/release/skills/dotnet-aot-compat/ @agocke @dotnet/appmodel
+/tests/release/dotnet-aot-compat/ @agocke @dotnet/appmodel
 
-/plugins/dotnet-upgrade/skills/migrate-dotnet9-to-dotnet10/ @danmoseley @dotnet/compat
-/tests/dotnet-upgrade/migrate-dotnet9-to-dotnet10/ @danmoseley @dotnet/compat
-/plugins/dotnet-upgrade/skills/migrate-dotnet10-to-dotnet11/ @danmoseley @dotnet/compat
-/tests/dotnet-upgrade/migrate-dotnet10-to-dotnet11/ @danmoseley @dotnet/compat
-/plugins/dotnet-upgrade/skills/migrate-dotnet8-to-dotnet9/ @danmoseley @dotnet/compat
-/tests/dotnet-upgrade/migrate-dotnet8-to-dotnet9/ @danmoseley @dotnet/compat
+/plugins/release/skills/migrate-dotnet9-to-dotnet10/ @danmoseley @dotnet/compat
+/tests/release/migrate-dotnet9-to-dotnet10/ @danmoseley @dotnet/compat
+/plugins/release/skills/migrate-dotnet10-to-dotnet11/ @danmoseley @dotnet/compat
+/tests/release/migrate-dotnet10-to-dotnet11/ @danmoseley @dotnet/compat
+/plugins/release/skills/migrate-dotnet8-to-dotnet9/ @danmoseley @dotnet/compat
+/tests/release/migrate-dotnet8-to-dotnet9/ @danmoseley @dotnet/compat
 
 # dotnet-diag (perf investigations, debugging, incident analysis)
-/plugins/dotnet-diag/skills/analyzing-dotnet-performance/ @dotnet/dotnet-diag
-/tests/dotnet-diag/analyzing-dotnet-performance/ @dotnet/dotnet-diag
+/plugins/release/skills/analyzing-dotnet-performance/ @dotnet/dotnet-diag
+/tests/release/analyzing-dotnet-performance/ @dotnet/dotnet-diag
 
-/plugins/dotnet-diag/skills/dump-collect/ @dotnet/dotnet-diag
-/tests/dotnet-diag/dump-collect/ @dotnet/dotnet-diag
+/plugins/release/skills/dump-collect/ @dotnet/dotnet-diag
+/tests/release/dump-collect/ @dotnet/dotnet-diag
 
-/plugins/dotnet-diag/skills/dotnet-trace-collect/ @brianrob @noahfalk
-/tests/dotnet-diag/dotnet-trace-collect/ @brianrob @noahfalk
+/plugins/release/skills/dotnet-trace-collect/ @brianrob @noahfalk
+/tests/release/dotnet-trace-collect/ @brianrob @noahfalk
 
-/plugins/dotnet-diag/skills/android-tombstone-symbolication/ @dotnet/dotnet-diag
-/tests/dotnet-diag/android-tombstone-symbolication/ @dotnet/dotnet-diag
+/plugins/release/skills/android-tombstone-symbolication/ @dotnet/dotnet-diag
+/tests/release/android-tombstone-symbolication/ @dotnet/dotnet-diag
 
-/plugins/dotnet-diag/skills/clr-activation-debugging/ @marklio @ChrisAhna
-/tests/dotnet-diag/clr-activation-debugging/ @marklio @ChrisAhna
+/plugins/release/skills/clr-activation-debugging/ @marklio @ChrisAhna
+/tests/release/clr-activation-debugging/ @marklio @ChrisAhna
 
-/plugins/dotnet-diag/skills/microbenchmarking/ @dotnet/dotnet-perf-team
-/tests/dotnet-diag/microbenchmarking/ @dotnet/dotnet-perf-team
+/plugins/release/skills/microbenchmarking/ @dotnet/dotnet-perf-team
+/tests/release/microbenchmarking/ @dotnet/dotnet-perf-team
 
-/plugins/dotnet-diag/agents/optimizing-dotnet-performance.agent.md @dotnet/appmodel
+/plugins/release/agents/optimizing-dotnet-performance.agent.md @dotnet/appmodel
 
-/plugins/dotnet/agents/optimizing-dotnet-performance.agent.md @dotnet/appmodel
-
-/plugins/dotnet-ai/skills/technology-selection/ @luisquintanilla @artl93
-/tests/dotnet-ai/technology-selection/ @luisquintanilla @artl93
+/plugins/release/skills/technology-selection/ @luisquintanilla @artl93
+/tests/release/technology-selection/ @luisquintanilla @artl93
 
 # dotnet-data (data access, Entity Framework)
-/plugins/dotnet-data/skills/optimizing-ef-core-queries/ @dotnet/efteam
-/tests/dotnet-data/optimizing-ef-core-queries/ @dotnet/efteam
+/plugins/release/skills/optimizing-ef-core-queries/ @dotnet/efteam
+/tests/release/optimizing-ef-core-queries/ @dotnet/efteam
 
 # dotnet-test (everything testing related)
-/plugins/dotnet-test/ @dotnet/dotnet-testing
-/tests/dotnet-test/ @dotnet/dotnet-testing
+/plugins/release/skills/migrate-mstest-v1v2-to-v3/ @dotnet/dotnet-testing
+/plugins/release/skills/migrate-mstest-v3-to-v4/ @dotnet/dotnet-testing
+/plugins/release/skills/migrate-vstest-to-mtp/ @dotnet/dotnet-testing
+/plugins/release/skills/mtp-hot-reload/ @dotnet/dotnet-testing
+/plugins/release/skills/run-tests/ @dotnet/dotnet-testing
+/plugins/release/skills/writing-mstest-tests/ @dotnet/dotnet-testing
+/tests/release/migrate-mstest-v1v2-to-v3/ @dotnet/dotnet-testing
+/tests/release/migrate-mstest-v3-to-v4/ @dotnet/dotnet-testing
+/tests/release/migrate-vstest-to-mtp/ @dotnet/dotnet-testing
+/tests/release/mtp-hot-reload/ @dotnet/dotnet-testing
+/tests/release/run-tests/ @dotnet/dotnet-testing
+/tests/release/writing-mstest-tests/ @dotnet/dotnet-testing
 
-# dotnet-test-experimental (experimental test quality skills)
-/plugins/dotnet-test-experimental/ @dotnet/dotnet-testing
-/tests/dotnet-test-experimental/ @dotnet/dotnet-testing
+# experimental test quality skills
+/plugins/experimental/ @dotnet/dotnet-testing
+/tests/experimental/ @dotnet/dotnet-testing
 
 # dotnet-maui
-/plugins/dotnet-maui/ @Redth @jfversluis
-/tests/dotnet-maui/ @Redth @jfversluis
+/plugins/release/skills/dotnet-maui-doctor/ @Redth @jfversluis
+/tests/release/dotnet-maui-doctor/ @Redth @jfversluis
 
 # dotnet-template-engine
-/plugins/dotnet-template-engine/ @YuliiaKovalova @JanKrivanek
-/tests/dotnet-template-engine/ @YuliiaKovalova @JanKrivanek
+/plugins/release/skills/template-authoring/ @YuliiaKovalova @JanKrivanek
+/plugins/release/skills/template-discovery/ @YuliiaKovalova @JanKrivanek
+/plugins/release/skills/template-instantiation/ @YuliiaKovalova @JanKrivanek
+/plugins/release/agents/template-engine.agent.md @YuliiaKovalova @JanKrivanek
+/tests/release/template-authoring/ @YuliiaKovalova @JanKrivanek
+/tests/release/template-discovery/ @YuliiaKovalova @JanKrivanek
+/tests/release/template-instantiation/ @YuliiaKovalova @JanKrivanek
 
 # dotnet-nuget (package and dependency management)
-/plugins/dotnet-nuget/ @dotnet/area-infrastructure-libraries @kartheekp-ms
-/tests/dotnet-nuget/ @dotnet/area-infrastructure-libraries @kartheekp-ms
+/plugins/release/skills/convert-to-cpm/ @dotnet/area-infrastructure-libraries @kartheekp-ms
+/tests/release/convert-to-cpm/ @dotnet/area-infrastructure-libraries @kartheekp-ms
 

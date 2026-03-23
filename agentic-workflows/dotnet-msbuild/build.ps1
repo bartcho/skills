@@ -6,18 +6,38 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $RepoRoot = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
-$SkillsDir = Join-Path $RepoRoot 'plugins' 'dotnet-msbuild' 'skills'
+$SkillsDir = Join-Path $RepoRoot 'plugins' 'release' 'skills'
 $DomainGatePattern = 'Only activate in MSBuild/\.NET build context'
 
-# ── Step 1: Validate skills ─────────────────────────────────────────
+# ── Step 1: Validate MSBuild skills ──────────────────────────────────
 
-Write-Host '=== Validating skills ===' -ForegroundColor Cyan
+Write-Host '=== Validating MSBuild skills ===' -ForegroundColor Cyan
 Write-Host ''
 
 $errors = 0
 
-$skillDirs = Get-ChildItem -Path $SkillsDir -Directory |
-    Where-Object { $_.Name -ne 'shared' }
+# Only validate skills that are part of the MSBuild knowledge bundles
+$MsBuildSkillNames = @(
+    'binlog-failure-analysis'
+    'binlog-generation'
+    'build-parallelism'
+    'build-perf-baseline'
+    'build-perf-diagnostics'
+    'check-bin-obj-clash'
+    'directory-build-organization'
+    'eval-performance'
+    'including-generated-files'
+    'incremental-build'
+    'msbuild-antipatterns'
+    'msbuild-modernization'
+    'msbuild-server'
+    'resolve-project-references'
+)
+
+$skillDirs = $MsBuildSkillNames | ForEach-Object {
+    $dir = Join-Path $SkillsDir $_
+    if (Test-Path $dir) { Get-Item $dir }
+}
 
 foreach ($dir in $skillDirs) {
     $skillFile = Join-Path $dir.FullName 'SKILL.md'
@@ -50,7 +70,7 @@ if ($errors -gt 0) {
     Write-Host "`n$errors validation error(s) found." -ForegroundColor Red
     exit 1
 } else {
-    Write-Host "✅ All $($skillDirs.Count) skills pass validation.`n" -ForegroundColor Green
+    Write-Host "✅ All $(@($skillDirs).Count) MSBuild skills pass validation.`n" -ForegroundColor Green
 }
 
 # ── Step 2: Compile knowledge bundles ────────────────────────────────

@@ -143,7 +143,7 @@ description: <description of what the skill does, when to use it, and when not t
 > **Tip:** The `description` field is used by the agent runtime to decide whether to load the full skill.
 > Include **when to use** and **when not to use** guidance directly in the description so the agent can
 > select or skip skills without reading the entire `SKILL.md`. This avoids unnecessary token usage.
-> See [`thread-abort-migration/SKILL.md`](plugins/dotnet-upgrade/skills/thread-abort-migration/SKILL.md) for a good example.
+> See [`thread-abort-migration/SKILL.md`](plugins/release/skills/thread-abort-migration/SKILL.md) for a good example.
 
 ### Recommended `SKILL.md` sections
 
@@ -178,10 +178,11 @@ An agent definition should be opinionated but bounded:
 - Define boundaries (what the agent should not do).
 - List the skills it expects to use and how it chooses among them.
 
-Add an agent file under a plugin's `agents/` directory:
+Add an agent file under the plugin's `agents/` directory:
 
 ```text
-plugins/<plugin>/agents/<agent-name>.agent.md
+plugins/release/agents/<agent-name>.agent.md
+plugins/experimental/agents/<agent-name>.agent.md
 ```
 
 ### Agent checklist
@@ -207,7 +208,8 @@ Skills and agents are documentation driven, but we still treat them as productio
 Each skill should have an `eval.yaml` file that defines test scenarios. Tests live under the repo root `tests/` directory, matching the plugin and skill name:
 
 ```text
-tests/<plugin>/<skill-name>/eval.yaml
+tests/release/<skill-name>/eval.yaml
+tests/experimental/<skill-name>/eval.yaml
 ```
 
 A minimal eval file:
@@ -230,7 +232,7 @@ scenarios:
 If a scenario requires files in the agent's working directory (e.g. `.csproj`, `.sln`, `.cs` files), place them alongside `eval.yaml` and opt into auto-copy:
 
 ```text
-tests/<plugin>/<skill-name>/
+tests/release/<skill-name>/
   eval.yaml
   MyProject.csproj
   Program.cs
@@ -265,20 +267,20 @@ See the [skill-validator README](eng/skill-validator/README.md) for the full lis
 Prerequisites: .NET 10 SDK or later and `gh auth login`.
 
 ```bash
-# Run tests for a single plugin
-dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --tests-dir tests/dotnet-msbuild plugins/dotnet-msbuild/skills
+# Run tests for the release plugin
+dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --tests-dir tests/release plugins/release/skills
 
 # Run tests for a single skill (pass the skill directory directly)
-dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --tests-dir tests/dotnet-msbuild plugins/dotnet-msbuild/skills/common-build-errors
+dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --tests-dir tests/release plugins/release/skills/binlog-failure-analysis
 
 # Fewer runs for faster iteration (default is 5)
-dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --runs 3 --tests-dir tests/dotnet-msbuild plugins/dotnet-msbuild/skills
+dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --runs 3 --tests-dir tests/release plugins/release/skills
 
 # Use a specific model
-dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --model claude-opus-4.6 --tests-dir tests/dotnet-msbuild plugins/dotnet-msbuild/skills
+dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --model claude-opus-4.6 --tests-dir tests/release plugins/release/skills
 
 # Run with verbose logging
-dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --verbose --tests-dir tests/dotnet-msbuild plugins/dotnet-msbuild/skills
+dotnet run --project eng/skill-validator/src/SkillValidator.csproj -- evaluate --verbose --tests-dir tests/release plugins/release/skills
 ```
 
 > [!WARNING]  
